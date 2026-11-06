@@ -8,6 +8,7 @@ import UserContext from './context/userContext.jsx'
 import { Routes,Route } from 'react-router-dom'
 import ProtectedRoutes from './component/ProtectedRoutes.jsx'
 import Dashboard from './component/Dashboard.jsx'
+import Editor from './component/Editor.jsx'
 function App() {
 
   const {user} = useContext(UserContext)
@@ -21,8 +22,11 @@ function App() {
           <ProtectedRoutes>
           <Navbar/>
           </ProtectedRoutes>}/>
-        <Route path='/dashboard' element={<Dashboard/>} />  
-        <Route path='/home' element={<Home/>} />  
+        <Route path='/home' element={<Home/>} />
+        <Route path='/editor' element={<Editor/>} />
+
+            
+        
 
       </Routes>
       
